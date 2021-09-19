@@ -1,0 +1,41 @@
+.add-locations
+  display: grid
+  grid-row: 2/4 ;
+  grid-column: 4/5;
+  gap: $gap
+  position relative
+  z-index: 10
+
+.location
+  display flex
+  justify-content: space-around
+  align-items: center
+  box-shadow: 0px 1px 5px 0px #0000003d;
+  background-color: $color-white
+  border-radius: $border-radius
+
+.location-city
+  font-weight: bold
+
+.add-location
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 100px 1fr;
+  border: dashed 3px $color-blue-ligth
+  border-radius: $border-radius
+  overflow: hidden
+
+.add-location-btn
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  color: $color-purple-ligth
+
+.add-location-img 
+  grid-row: 3/3
+
+.add-location-img img
+  width: 100%
+
