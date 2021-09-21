@@ -4,35 +4,79 @@
   position: relative
   cursor: pointer
 
+
 .visit-card
   border-radius: $border-radius
   overflow: hidden
   color: $color-white
+
+.visit-card p
+  padding-left: 25px;
+  padding-top: 20px;
 
 .visit-card img
   object-fit: cover
   width 100%
   height: 100%
 
+.visit-review
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative
 
-.visit p
-  position: absolute
-  top 3em
-  padding: 20px
-  color $color-white
+.visit-review i
+  margin-right: 10px;
+   font-size: .9em;
+
+.visit-review span
+  color $color-gray
+
+.visit-review-items
+  display: flex
+
+.visit-review-item
+  width: 30px
+  height: 30px
+  border-left:solid 3px $color-white
+  font-weight: bold
+  color: $color-white
+  background-color: $color-blue-ligth
+  border-radius: 5px
+
+.plus
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-purple-ligth
+
+.visit-review-item img
+  width: 100%
+  object-fit: cover
+
 
 .visit-add
   display: grid;
-  grid-template-rows: 80px;
+  grid-template-rows: 30px 80px 1fr;
   gap: 20px;
 
 .card1
-  background-color: $color-purple-ligth
+  background-image: url("../assets/images/bg-1.jpg")
+  background-position: center
+  background-size: cover
 
 .card2
+  background-image: url("../assets/images/bg-2.jpg")
+  background-position: center
+  background-size: cover
   display: grid
   grid-template-columns: 1fr 100px
-  background-color: $color-purple-main
+
+.card3
+  background-size: cover
+  background-position: center
+  background-image: url("../assets/images/singapur.jpg")
+
 
 .visit-card-plus
   display: flex;
@@ -42,3 +86,15 @@
   align-items: center;
   background-color: $color-purple-ligth
   border-radius: $border-radius
+
+.visit-country
+  display: grid;
+  grid-template-columns: 20px 105px;
+  justify-items: stretch;
+  align-items: stretch;
+
+@media screen and (max-width: 768px)
+  .visit
+    grid-column: 1/5
+  .visit-add
+    grid-column: 1/5

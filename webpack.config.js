@@ -31,7 +31,14 @@ module.exports = {
           "stylus-loader",
         ],
       },
+      {
+        test: /\.(png|jpg|svg|)$/i,
+        type: 'asset/resource',
+      },
     ],
+  },
+  experiments: {
+    topLevelAwait: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

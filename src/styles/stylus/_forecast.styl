@@ -7,8 +7,11 @@
   grid-template-columns: 1fr 100px
   height: 80px;
   box-shadow: 0px 1px 5px 0px #0000003d;
-  border-radius: $border-radius
+  border-radius: $border-radius-card
 
+.forecast-item img
+  height: 70px
+  
 .forecast-day
   display: flex
   align-items: center
@@ -19,10 +22,12 @@
   align-items: center
   background-color: $color-purple-main
   color $color-white
-  border-radius: $border-radius
+  border-radius: $border-radius-card
 
 .morning
   background-color: $color-blue-ligth
   color: $color-black
 
-
+@media screen and (max-width: 768px)
+  .forecast
+    grid-column: 1/5

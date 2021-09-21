@@ -12,13 +12,13 @@ body
 
 .main
   display: grid
-  grid-template-columns: minmax(auto)
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: 170px 80px 300px;
   margin: 0 auto
   width: 90%
   gap 40px
   
 .title
-  text-align center
   font-weight: 300
 
 @import "./_banner.styl"
@@ -28,6 +28,8 @@ body
 @import "./_visit.styl"
 
 @import "./_location.styl"
+
+@import "./_temp.styl"
 
 
 

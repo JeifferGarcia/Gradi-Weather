@@ -1,0 +1,64 @@
+.temp-conatiner
+  width 90px
+  height: 120px
+  background-color: $color-purple-ligth
+  position: absolute
+  top 100px
+  left: 0
+  color: $color-white
+  border-top-right-radius: $border-radius-card
+  border-bottom-right-radius: $border-radius-card
+
+.temp-conatiner:before
+  content: ""
+  width: 5px;
+  height: 5px;
+  border-top: solid $color-purple-ligth 5px;
+  border-left: solid $color-purple-ligth 5px ;
+  border-right: solid #0000 5px;
+  border-bottom: solid #0000 6px;
+  border-radius: 50%;
+  position: absolute
+  bottom: -7px;
+  left: -2px;
+
+.temp-icon
+  display: grid
+  grid-template-rows: 50px 15px
+  justify-items: center
+  background-color: $color-purple-main
+  border-top-right-radius: $border-radius-card
+  border-bottom-right-radius: $border-radius-card
+  position relative
+
+.temp-icon:before
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: solid #0000 5px;
+    border-left: solid $color-purple-main  5px;
+    border-right: solid #0000 6px;
+    border-bottom: solid $color-purple-main  5px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: -13px;
+
+
+.temp-icon img
+  width: 60px
+
+.temp-icon p
+  font-weight: bold
+  font-size: .7em
+
+.temp
+  display: flex
+  justify-content: center
+  font-size: 1.7em
+  padding: 10px
+  font-weight: bold
+
+
+.temp span
+  font-size: .6em

@@ -9,34 +9,63 @@ body {
 }
 .main {
   display: grid;
-  grid-template-columns: minmax(auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 170px 80px 300px;
   margin: 0 auto;
   width: 90%;
   gap: 40px;
 }
 .title {
-  text-align: center;
   font-weight: 300;
 }
 .main-banner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
   justify-items: center;
   align-content: center;
   width: 100%;
   height: 300px;
-  grid-column: 1/5;
+  grid-column: 1/6;
   grid-row: 1/3;
 }
+.main-banner img {
+  width: 150px;
+}
+.banner-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .banner-bg {
-  background-image: url("../assets/images/Bogota.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+.day {
+  background-image: url("../assets/images/bogota-d.jpg");
+}
+.nigth {
+  background-image: url("../assets/images/bogota-n.jpg");
+}
 .main-banner h1 {
   color: #9121ed;
-  font-size: 3em;
+  font-size: 2em;
+  text-shadow: 0 0 10px #000;
+}
+.main-banner span {
+  font-size: 0.7em;
+}
+.container-map {
+  grid-row: 2;
+}
+@media screen and (max-width: 768px) {
+  .banner-title {
+    grid-column: 3;
+  }
+  .container-map {
+    grid-column: 3;
+  }
 }
 .forecast {
   display: grid;
@@ -48,6 +77,9 @@ body {
   height: 80px;
   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.239);
   border-radius: 20px;
+}
+.forecast-item img {
+  height: 70px;
 }
 .forecast-day {
   display: flex;
@@ -65,6 +97,11 @@ body {
   background-color: #dae7f7;
   color: #000;
 }
+@media screen and (max-width: 768px) {
+  .forecast {
+    grid-column: 1/5;
+  }
+}
 .visit {
   display: grid;
   grid-template-rows: 50px;
@@ -72,33 +109,71 @@ body {
   cursor: pointer;
 }
 .visit-card {
-  border-radius: 20px;
+  border-radius: 50px;
   overflow: hidden;
   color: #fff;
+}
+.visit-card p {
+  padding-left: 25px;
+  padding-top: 20px;
 }
 .visit-card img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.visit p {
-  position: absolute;
-  top: 3em;
-  padding: 20px;
+.visit-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.visit-review span {
+  color: #808080;
+}
+.visit-review-items {
+  display: flex;
+}
+.visit-review-item {
+  width: 30px;
+  height: 30px;
+  border-left: solid 3px #fff;
+  font-weight: bold;
   color: #fff;
+  background-color: #dae7f7;
+  border-radius: 5px;
+}
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9121ed;
+}
+.visit-review-item img {
+  width: 100%;
+  object-fit: cover;
 }
 .visit-add {
   display: grid;
-  grid-template-rows: 80px;
+  grid-template-rows: 30px 80px 1fr;
   gap: 20px;
 }
 .card1 {
-  background-color: #9121ed;
+  background-image: url("../assets/images/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .card2 {
+  background-image: url("../assets/images/bg-2.jpg");
+  background-position: center;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 100px;
-  background-color: #450092;
+}
+.card3 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/images/singapur.jpg");
 }
 .visit-card-plus {
   display: flex;
@@ -107,34 +182,65 @@ body {
   border-radius: 50px;
   align-items: center;
   background-color: #9121ed;
-  border-radius: 20px;
+  border-radius: 50px;
+}
+.visit-country {
+  display: grid;
+  grid-template-columns: 20px 105px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+@media screen and (max-width: 768px) {
+  .visit {
+    grid-column: 1/5;
+  }
+  .visit-add {
+    grid-column: 1/5;
+  }
 }
 .add-locations {
   display: grid;
+  grid-template-rows: 113px 113px 1fr;
   grid-row: 2/4;
   grid-column: 4/5;
-  gap: 10px;
-  position: relative;
-  z-index: 10;
+  gap: 13px;
 }
 .location {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px 30px;
+  justify-items: center;
   align-items: center;
   box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.239);
   background-color: #fff;
   border-radius: 20px;
+}
+.location-icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #dae7f7;
+}
+.location h4 {
+  font-size: 2em;
+}
+.location span {
+  font-size: 0.8em;
+  color: #808080;
 }
 .location-city {
   font-weight: bold;
 }
 .add-location {
   display: grid;
+  grid-template-rows: 40px 1fr;
+  padding: 15px;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 100px 1fr;
   border: dashed 3px #dae7f7;
-  border-radius: 20px;
+  font-size: 1.3em;
+  border-radius: 50px;
   overflow: hidden;
 }
 .add-location-btn {
@@ -143,10 +249,84 @@ body {
   border-radius: 20px;
   border: none;
   color: #9121ed;
+  cursor: pointer;
+}
+.add-location-btn:active {
+  transform: scale(0.97);
 }
 .add-location-img {
   grid-row: 3/3;
 }
 .add-location-img img {
-  width: 100%;
+  width: 240px;
+}
+@media screen and (max-width: 768px) {
+  .add-locations {
+    grid-column: 1/5;
+    position: initial;
+    grid-row: 6;
+  }
+}
+.temp-conatiner {
+  width: 90px;
+  height: 120px;
+  background-color: #9121ed;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.temp-conatiner:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: solid #9121ed 5px;
+  border-left: solid #9121ed 5px;
+  border-right: solid rgba(0,0,0,0) 5px;
+  border-bottom: solid rgba(0,0,0,0) 6px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -7px;
+  left: -2px;
+}
+.temp-icon {
+  display: grid;
+  grid-template-rows: 50px 15px;
+  justify-items: center;
+  background-color: #450092;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+}
+.temp-icon:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-top: solid rgba(0,0,0,0) 5px;
+  border-left: solid #450092 5px;
+  border-right: solid rgba(0,0,0,0) 6px;
+  border-bottom: solid #450092 5px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: -13px;
+}
+.temp-icon img {
+  width: 60px;
+}
+.temp-icon p {
+  font-weight: bold;
+  font-size: 0.7em;
+}
+.temp {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+  padding: 10px;
+  font-weight: bold;
+}
+.temp span {
+  font-size: 0.6em;
 }
