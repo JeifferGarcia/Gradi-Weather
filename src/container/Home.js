@@ -4,7 +4,6 @@ import Forecast from "../components/Forecast"
 import Visit from "../components/Visit"
 import AddLocation from "../components/AddLocation"
 import bogota from "../assets/images/bogota.svg"
-import iconLocation from "../assets/images/location-icon.png"
 const API = 'https://api.openweathermap.org/data/2.5/weather?q=bogota&appid=c44d035e247374aa73bcaa09c9610cdf'
 
 const data = await getData(API)
